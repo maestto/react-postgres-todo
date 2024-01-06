@@ -16,7 +16,7 @@ class TaskController {
     }
 
     async getTasks(req, res) {
-        const query = `SELECT * FROM tasks`
+        const query = `SELECT * FROM tasks ORDER BY id ASC`
 
         try {
             const result = await db.query(query)
